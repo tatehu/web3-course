@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 /*
 729. 我的日程安排表 I：实现一个 MyCalendar 类来存放你的日程安排。如果要添加的日程安排不会造成 重复预订 ，
 则可以存储这个新的日程安排。当两个日程安排有一些时间上的交叉时（例如两个日程安排都在同一时间内），就会产生 重复预订 。日程可以用一对整数 start 和 end 表示，
@@ -9,19 +11,57 @@ package main
 */
 
 func main() {
-	nums := []int{2, 2, 1}
-	println(SingleNumber(nums))
+	cal := Constructor()
+
+	// 添加几个日程，观察是否成功
+	fmt.Println(cal.Book(10, 20))
+	fmt.Println(cal.Book(15, 25))
+	fmt.Println(cal.Book(20, 30))
+	fmt.Println(cal.Book(5, 10))
+	fmt.Println(cal.Book(10, 15))
+	fmt.Println(cal.Book(5, 15))
 }
 
-func SingleNumber(nums []int) int {
-	m := make(map[int]int)
-	for _, v := range nums {
-		m[v]++
+// 定义一个结构体表示日程安排
+type Interval struct {
+	start, end int
+}
+
+// 定义 MyCalendar 结构体
+type MyCalendar struct {
+	events []Interval
+}
+
+// 初始化 MyCalendar
+func Constructor() MyCalendar {
+	return MyCalendar{
+		events: []Interval{},
 	}
-	for k, v := range m {
-		if v == 1 {
-			return k
+}
+
+// 实现 book 方法
+func (c *MyCalendar) Book(start int, end int) bool {
+	for _, event := range c.events {
+		// 如果两个时间区间有重叠，返回 false
+		if max1(start, event.start) < min(end, event.end) {
+			return false
 		}
 	}
-	return 0
+	// 没有重叠，添加到日历中
+	c.events = append(c.events, Interval{start, end})
+	return true
+}
+
+func min(a, b int) int {
+	if a < b {
+		return a
+	}
+	return b
+}
+
+func max1(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }

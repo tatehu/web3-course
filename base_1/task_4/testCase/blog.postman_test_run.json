@@ -1,0 +1,697 @@
+{
+	"id": "82744236-2de0-4fd2-a516-ea2395fc227a",
+	"name": "blog",
+	"timestamp": "2025-05-18T07:18:50.348Z",
+	"collection_id": "10412743-3f3eb34e-8373-4706-b751-70019bd87831",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 35,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-05-18T07:18:48.453Z",
+	"totalFail": 17,
+	"results": [
+		{
+			"id": "214cf243-d1f3-444c-a7f2-6ef9b943318b",
+			"name": "TC001",
+			"url": "http://localhost:8080/api/v1/login",
+			"time": 82,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response has the required fields": true,
+				"Token is a non-empty string": true,
+				"Content-Type header is application/json": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				82
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response has the required fields": true,
+					"Token is a non-empty string": true,
+					"Content-Type header is application/json": true
+				}
+			]
+		},
+		{
+			"id": "b4dbb624-ace7-45d0-bea1-473860affe54",
+			"name": "TC002",
+			"url": "http://localhost:8080/api/v1/login",
+			"time": 4,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 200": false,
+				"Response has the required field - error": true,
+				"Response schema for required fields and data types": true,
+				"Content-Type header is application/json": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required field - error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response schema for required fields and data types": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Response status code is 200": false,
+					"Response has the required field - error": true,
+					"Response schema for required fields and data types": true,
+					"Content-Type header is application/json": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "f3c816ec-7edb-42cf-b967-9b1f33652388",
+			"name": "TC003",
+			"url": "http://localhost:8080/api/v1/login",
+			"time": 79,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Response status code is 200": false,
+				"Response has the required field - error": true,
+				"Content-Type header is application/json": true,
+				"Response time is within an acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required field - error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				79
+			],
+			"allTests": [
+				{
+					"Response status code is 200": false,
+					"Response has the required field - error": true,
+					"Content-Type header is application/json": true,
+					"Response time is within an acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "ab8519fc-5f69-4895-8de7-cb4a36b9a4bc",
+			"name": "TC004",
+			"url": "http://localhost:8080/api/v1/register",
+			"time": 81,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				81
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "102aed6b-194b-4838-b4fd-5fe16796469a",
+			"name": "TC005",
+			"url": "http://localhost:8080/api/v1/register",
+			"time": 78,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				78
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2fd76794-5dc4-49e1-8b16-545de4dea518",
+			"name": "TC006",
+			"url": "http://localhost:8080/api/v1/post/1",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Content type is application/json": true,
+				"Response time is within an acceptable range": true,
+				"Validate the response schema for ID, CreatedAt, UpdatedAt, DeletedAt, Title, Content, UserID, and User": true,
+				"Username and Email in the User object are in a valid format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the response schema for ID, CreatedAt, UpdatedAt, DeletedAt, Title, Content, UserID, and User": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Username and Email in the User object are in a valid format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Content type is application/json": true,
+					"Response time is within an acceptable range": true,
+					"Validate the response schema for ID, CreatedAt, UpdatedAt, DeletedAt, Title, Content, UserID, and User": true,
+					"Username and Email in the User object are in a valid format": true
+				}
+			]
+		},
+		{
+			"id": "69655856-0785-42cb-af1f-b11ca2351009",
+			"name": "TC007",
+			"url": "http://localhost:8080/api/v1/post/add",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is within an acceptable range": true,
+				"Response has the required fields": true,
+				"User object must exist and contain specific properties": true,
+				"Email is in a valid format": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User object must exist and contain specific properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is within an acceptable range": true,
+					"Response has the required fields": true,
+					"User object must exist and contain specific properties": true,
+					"Email is in a valid format": false
+				}
+			]
+		},
+		{
+			"id": "d138ca8d-645f-4dd0-bfbe-3e22b7f0d807",
+			"name": "TC008",
+			"url": "http://localhost:8080/api/v1/post/all",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 404": false,
+				"Response has the required field - error": false,
+				"Content-Type header is application/json": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required field - error": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Response status code is 404": false,
+					"Response has the required field - error": false,
+					"Content-Type header is application/json": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "30b7b27b-bf60-4c39-a685-547392856ab6",
+			"name": "TC009",
+			"url": "http://localhost:8080/api/v1/post/update/1",
+			"time": 11,
+			"responseCode": {
+				"code": 403,
+				"name": "Forbidden"
+			},
+			"tests": {
+				"Response status code is 201": false,
+				"Response time is within an acceptable range": true,
+				"Response has the required fields": false,
+				"User object must exist and contain specific properties": false,
+				"Email is in a valid format": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"User object must exist and contain specific properties": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Email is in a valid format": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Response status code is 201": false,
+					"Response time is within an acceptable range": true,
+					"Response has the required fields": false,
+					"User object must exist and contain specific properties": false,
+					"Email is in a valid format": false
+				}
+			]
+		},
+		{
+			"id": "59143473-10e5-4bd4-83a3-e3cca4790a2f",
+			"name": "TC010",
+			"url": "http://localhost:8080/api/v1/post/update/2",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is within an acceptable range": true,
+				"Content-Type header is application/json": true,
+				"Validate the response schema for required fields": true,
+				"User email is in a valid format": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the response schema for required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User email is in a valid format": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is within an acceptable range": true,
+					"Content-Type header is application/json": true,
+					"Validate the response schema for required fields": true,
+					"User email is in a valid format": false
+				}
+			]
+		},
+		{
+			"id": "27856f7e-0f93-4083-a0e8-e973a632af82",
+			"name": "TC011",
+			"url": "http://localhost:8080/api/v1/post/5",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				7
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6478e939-1a24-45fc-949f-109a1a9be856",
+			"name": "TC012",
+			"url": "http://localhost:8080/api/v1/post/5",
+			"time": 2,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "dddbebc9-aec7-4d6f-b829-f55bcc4083f8",
+			"name": "TC013",
+			"url": "http://localhost:8080/api/v1/comment/1",
+			"time": 5,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 404": false,
+				"Response has the required field - error": false,
+				"Content-Type header is application/json": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 404": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response has the required field - error": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Response status code is 404": false,
+					"Response has the required field - error": false,
+					"Content-Type header is application/json": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "830e329c-ba1d-44d4-bd4c-1c48fb3f17b3",
+			"name": "TC014",
+			"url": "http://localhost:8080/api/v1/post/add",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is within an acceptable range": true,
+				"Response has the required fields": true,
+				"User object must exist and contain specific properties": true,
+				"Email is in a valid format": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"User object must exist and contain specific properties": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is within an acceptable range": true,
+					"Response has the required fields": true,
+					"User object must exist and contain specific properties": true,
+					"Email is in a valid format": false
+				}
+			]
+		},
+		{
+			"id": "1dfbb29b-4960-4597-a852-ae857d6b3da1",
+			"name": "TC015",
+			"url": "http://localhost:8080/api/v1/comment/add/1",
+			"time": 2,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Response status code is 201": false,
+				"Response time is less than 200ms": true,
+				"Validate the structure of the response schema": false,
+				"User object is present and contains expected fields": false,
+				"Post object is present and contains expected fields": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the structure of the response schema": {
+					"pass": 0,
+					"fail": 1
+				},
+				"User object is present and contains expected fields": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Post object is present and contains expected fields": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Response status code is 201": false,
+					"Response time is less than 200ms": true,
+					"Validate the structure of the response schema": false,
+					"User object is present and contains expected fields": false,
+					"Post object is present and contains expected fields": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 378,
+	"collection": {
+		"requests": [
+			{
+				"id": "214cf243-d1f3-444c-a7f2-6ef9b943318b",
+				"method": "POST"
+			},
+			{
+				"id": "b4dbb624-ace7-45d0-bea1-473860affe54",
+				"method": "POST"
+			},
+			{
+				"id": "f3c816ec-7edb-42cf-b967-9b1f33652388",
+				"method": "POST"
+			},
+			{
+				"id": "ab8519fc-5f69-4895-8de7-cb4a36b9a4bc",
+				"method": "POST"
+			},
+			{
+				"id": "102aed6b-194b-4838-b4fd-5fe16796469a",
+				"method": "POST"
+			},
+			{
+				"id": "2fd76794-5dc4-49e1-8b16-545de4dea518",
+				"method": "GET"
+			},
+			{
+				"id": "69655856-0785-42cb-af1f-b11ca2351009",
+				"method": "POST"
+			},
+			{
+				"id": "d138ca8d-645f-4dd0-bfbe-3e22b7f0d807",
+				"method": "GET"
+			},
+			{
+				"id": "30b7b27b-bf60-4c39-a685-547392856ab6",
+				"method": "POST"
+			},
+			{
+				"id": "59143473-10e5-4bd4-83a3-e3cca4790a2f",
+				"method": "POST"
+			},
+			{
+				"id": "27856f7e-0f93-4083-a0e8-e973a632af82",
+				"method": "DELETE"
+			},
+			{
+				"id": "6478e939-1a24-45fc-949f-109a1a9be856",
+				"method": "DELETE"
+			},
+			{
+				"id": "dddbebc9-aec7-4d6f-b829-f55bcc4083f8",
+				"method": "GET"
+			},
+			{
+				"id": "830e329c-ba1d-44d4-bd4c-1c48fb3f17b3",
+				"method": "POST"
+			},
+			{
+				"id": "1dfbb29b-4960-4597-a852-ae857d6b3da1",
+				"method": "POST"
+			}
+		]
+	}
+}
